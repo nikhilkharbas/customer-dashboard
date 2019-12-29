@@ -25,24 +25,16 @@
         }
     }
 
-    &:after {
+    & {
         content: '';
-        background: #fff;
+        background-image: url("../../assets/images/theme.jpg");
         position: absolute;
         top: 0;
         left: 0;
         bottom: 50%;
         right: 0;
     }
-    &:before {
-        content: '';
-        background: #3f51b5;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        bottom: 0;
-        right: 0;
-    }
+    
 }
 .text-center {
     text-align: center;

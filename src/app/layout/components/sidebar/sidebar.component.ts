@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
     selector: 'app-sidebar',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
     public showMenu: string;
-    constructor() {}
+    constructor(public router: Router) {}
 
     ngOnInit() {
         this.showMenu = '';
@@ -20,4 +21,11 @@ export class SidebarComponent implements OnInit {
             this.showMenu = element;
         }
     }
+
+
+    onLoggedout() {
+        sessionStorage.removeItem('isLoggedin');
+        this.router.navigate(['/login']);
+    }
+
 }

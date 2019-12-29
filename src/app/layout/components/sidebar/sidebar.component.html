@@ -1,4 +1,10 @@
 <div id="sidebar">
+    <button class="hidden-sm" mat-icon-button >
+        <mat-icon>account_circle</mat-icon>
+    </button>
+    <button mat-icon-button (click)="onLoggedout()">
+        <mat-icon>exit_to_app</mat-icon>
+    </button>
     <mat-nav-list>
         <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/dashboard']">
             <mat-icon class="sidenav-icon">dashboard</mat-icon> {{ 'Dashboard' | translate }}
