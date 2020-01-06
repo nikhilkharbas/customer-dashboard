@@ -15,7 +15,10 @@ export async function login(req: Request, res: Response): Promise<Response | voi
         bcrypt.compare(req.body.password,users[0][0].password,(err, isMatch) => {
             if (err) { return err; }
             if (!isMatch) { return res.sendStatus(403); }
-            const token = jwt.sign({ users }, process.env.SECRET_TOKEN); // , { expiresIn: 10 } seconds
+            const token = jwt.sign({ users }, process.env.SECRET_TOKEN,{
+                algorithm: 'HS256',
+                expiresIn: process.env.jwtExpirySeconds
+              }); // , { expiresIn: 10 } seconds
             res.status(200).json({ token });
         });
    
