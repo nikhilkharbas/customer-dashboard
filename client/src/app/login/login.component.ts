@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     onLogin() {
         console.log('username ',this.userName);
         console.log('password ',this.password);
-      //  this.loginService.login();
+        this.loginService.login(this.userName,this.password);
         sessionStorage.setItem('isLoggedin', 'true');
         this.router.navigate(['/dashboard']);
     }

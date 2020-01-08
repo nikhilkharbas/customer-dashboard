@@ -7,6 +7,7 @@ import { connect } from '../database'
 // Interfaces
 
 export async function login(req: Request, res: Response): Promise<Response | void> {
+    console.log('repsonse',res);
     let username = req.body.username
     try {
         const conn = await connect();
