@@ -3,13 +3,13 @@ import * as express from 'express';
 import * as morgan from 'morgan';
 import * as mysql from 'mysql';
 import * as path from 'path';
-
+import * as cors from 'cors';
 import setRoutes from './routes';
 
 const app = express();
 dotenv.config();
 app.set('port', (process.env.PORT || 3000));
-
+app.use(cors());
 app.use('/', express.static(path.join(__dirname, '../public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
