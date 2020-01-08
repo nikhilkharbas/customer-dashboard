@@ -20,8 +20,8 @@ export async function login(req: Request, res: Response): Promise<Response | voi
                 algorithm: 'HS256',
                 expiresIn: process.env.jwtExpirySeconds
               }); // , { expiresIn: 10 } seconds
-              sessionStorage.setItem('token', token);
-              sessionStorage.setItem('isLoggedin', 'true');
+              //sessionStorage.setItem('token', token);
+              //sessionStorage.setItem('isLoggedin', 'true');
               return res.status(200).json({ token });
         });
    
