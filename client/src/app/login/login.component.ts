@@ -8,7 +8,7 @@ import { LoginService } from './login.service';
     styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-    public username : '';
+    public userName : '';
     public password : '';
     constructor(private router: Router,
         private loginService: LoginService) {
@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
     ngOnInit() { }
 
     onLogin() {
-        console.log('username ',this.username);
+        console.log('username ',this.userName);
         console.log('password ',this.password);
       //  this.loginService.login();
         sessionStorage.setItem('isLoggedin', 'true');

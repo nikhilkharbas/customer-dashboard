@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/material';
 
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +37,7 @@ export const createTranslateLoader = (http: HttpClient) => {
     declarations: [AppComponent,LoginComponent,],
     imports: [
         CommonModule,
+        FormsModule,
         MatInputModule,
         MatCheckboxModule,
         MatButtonModule,

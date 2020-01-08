@@ -8,14 +8,14 @@
             <div fxFlex  fxlayout="row" fxlayout.lt-md="column">
                 <div fxFlexFill>
                     <mat-form-field class="w-100">
-                        <input matInput placeholder="Email" value={{username}}>
+                        <input matInput placeholder="Email" [(ngModel)]="userName" name="userName">
                     </mat-form-field>
                 </div>
             </div>
             <div fxFlex  fxLayout="row" fxLayout.lt-md="column">
                 <div fxFlexFill>
                     <mat-form-field class="w-100">
-                        <input matInput type="password" placeholder="Password" value={{password}}>
+                        <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password">
                     </mat-form-field>
                 </div>
             </div>
