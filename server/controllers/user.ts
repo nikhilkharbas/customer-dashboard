@@ -5,7 +5,7 @@ import * as bcrypt from 'bcryptjs';
 // DB
 import { connect } from '../database'
 // Interfaces
-import { User } from '../models/Users'
+import { User } from '../models/users'
 
 export async function getUsers(req: Request, res: Response): Promise<Response | void> {
     try {

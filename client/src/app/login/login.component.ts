@@ -21,14 +21,16 @@ export class LoginComponent implements OnInit {
         console.log('username ', this.userName);
         console.log('password ', this.password);
         this.loginService.login(this.userName, this.password).subscribe(
-            (data: any) => {
-                console.log('Success' + data);
-              },
+            (response) => {
+                console.log('Success' + response);
+                if (sessionStorage.getItem('isLoggedin')) {
+                    //addcondition for check auth token
+                    this.router.navigate(['/dashboard']);
+                }
+                      },
               (err) => {
                 console.log('Error:' + JSON.stringify(err));
               }
         );
-        sessionStorage.setItem('isLoggedin', 'true');
-        this.router.navigate(['/dashboard']);
     }
 }
