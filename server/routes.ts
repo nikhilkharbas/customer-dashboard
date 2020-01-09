@@ -2,7 +2,7 @@ import * as express from 'express';
 import { connect } from './database'
 connect();
 // import CatCtrl from './controllers/cat';
-import {getUsers,createUser,getUser,updateUser} from './controllers/user';
+import {getUsers, createUser, getUser, updateUser} from './controllers/user';
 import {login} from './controllers/login';
 
 export default function setRoutes(app) {

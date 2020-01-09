@@ -4,6 +4,7 @@ import * as morgan from 'morgan';
 import * as mysql from 'mysql';
 import * as path from 'path';
 import * as cors from 'cors';
+import * as portUsed from 'tcp-port-used';
 import setRoutes from './routes';
 
 const app = express();
@@ -36,10 +37,12 @@ if (process.env.NODE_ENV === 'test') {
     app.get('/*', (req, res) => {
       res.sendFile(path.join(__dirname, '../public/index.html'));
     });
-
+    // tslint:disable-next-line: no-unused-expression
+    portUsed.waitUntilFree(3000).then(function() {
     if (!module.parent) {
       app.listen(app.get('port'), () => console.log(`Angular Full Stack listening on port ${app.get('port')}`));
     }
+  });
   // })
   // .catch(err => console.error(err));
 

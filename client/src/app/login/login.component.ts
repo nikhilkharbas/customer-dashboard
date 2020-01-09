@@ -23,9 +23,10 @@ export class LoginComponent implements OnInit {
         this.loginService.login(this.userName, this.password).subscribe(
             (response) => {
                 console.log('Success' + response);
-                sessionStorage.setItem('token',response.token);
+                sessionStorage.setItem('token', response.token);
+                sessionStorage.setItem('isLoggedin', 'true');
                 if (sessionStorage.getItem('isLoggedin')) {
-                    //addcondition for check auth token
+                    // addcondition for check auth token
                     this.router.navigate(['/dashboard']);
                 }
                       },
