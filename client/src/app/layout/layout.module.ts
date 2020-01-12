@@ -12,7 +12,12 @@ import {
 import { TranslateModule } from '@ngx-translate/core';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
-import { Screen2Component } from './screen2/screen2.component';
+import { EnquiryFormComponent } from './enquiry-form/enquiry-form.component';
+import { EnquiredcustomerComponent } from './enquiredcustomer/enquiredcustomer.component';
+import { BookingFormComponent } from './booking-form/booking-form.component';
+import { ViewBookingComponent } from './view-booking/view-booking.component';
+import { DeuPaymentsComponent } from './deu-payments/deu-payments.component';
+import { PaymentScheduleComponent } from './payment-schedule/payment-schedule.component';
 
 @NgModule({
     imports: [
@@ -27,7 +32,7 @@ import { Screen2Component } from './screen2/screen2.component';
         MatListModule,
         TranslateModule
     ],
-    declarations: [Screen2Component, LayoutComponent ]
+    declarations: [ LayoutComponent, EnquiryFormComponent, EnquiredcustomerComponent, BookingFormComponent, ViewBookingComponent, DeuPaymentsComponent, PaymentScheduleComponent ]
 
 })
 export class LayoutModule { }
