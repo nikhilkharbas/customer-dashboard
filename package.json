@@ -3,7 +3,7 @@
     "version": "7.0.0",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve --progress",
+        "start": "concurrently \"ng serve --proxy-config proxy.conf.json --open\" \"tsc -w -p server\" \"nodemon dist/server/app.js\"",
         "build": "ng build --prod",
         "dev": "concurrently \"ng serve --proxy-config proxy.conf.json --open\" \"tsc -w -p server\" \"nodemon dist/server/app.js\"",
         "gitbuild": "ng build --prod --base-href /start-javascript/sb-admin-material/master/dist/",
@@ -86,6 +86,7 @@
         "karma-coverage-istanbul-reporter": "~2.0.1",
         "karma-jasmine": "~2.0.1",
         "karma-jasmine-html-reporter": "^1.4.0",
+        "nodemon": "^2.0.2",
         "protractor": "~5.4.0",
         "sass-loader": "^7.1.0",
         "ts-node": "~7.0.0",
