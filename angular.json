@@ -27,6 +27,7 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
                 "client/src/styles/styles.scss"
             ],
             "scripts": [
@@ -88,6 +89,7 @@
               "node_modules/chart.js/dist/Chart.js"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
                 "styles.scss"
             ],
             "assets": [
